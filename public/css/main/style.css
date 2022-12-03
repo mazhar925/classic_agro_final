@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+.visibleBody{
+    display: flex;
+}
+/* Navbar */
+.navContainer{
+    width: 17vw;
+    height: 100vh;
+    background-color: #252E33;
+}
+.navList{
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.navList a{
+    text-decoration: none;
+    color: #fff;
+    opacity: .5;
+    font-weight: 500;
+}
+.navList a:hover{
+    opacity: .75;
+}
+.navList a i{
+    margin-right: 11px;
+}
+.navTitle{
+    color: #fff;
+    opacity: .9;
+    padding-left: 30px;
+    padding-top: 40px;
+    font-size: 18px;
+    list-style: none;
+    cursor: pointer;
+}
+.loginBtn{
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    opacity: .5;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #252E33;
+    border: none;
+    cursor: pointer;
+}
+/* product List */
+.mainSection{
+    width: 83vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.stockSection{
+    width: 95%;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.btn{
+    width: 150px;
+    height: 35px;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.btnPrimary {
+    background-color: #3c8dbc;
+}
+.btnPrimary:hover{
+    background-color: #155f8b;
+}
+.btnAlert {
+    background-color: #EA2C58;
+}
+.btnAlert:hover{
+    background-color: #c52046;
+}
+.btnGeneral{
+    background-color: #00A65A;
+}
+.btnGeneral:hover{
+    background-color: #077946;
+}
+.productSection{
+    width: 95%;
+    height: 80%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.searchBar{
+    width: 100%;
+    height: 20%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.searchBar input{
+    width: 220px;
+    outline: none;
+    padding: 2px 0 2px 2px;
+    border: 2px solid #3c8dbc;
+}
+.searchBtn{
+    width: 100px;
+    height: 30px;
+    background-color: #3c8dbc;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+.productTableContainer{
+    width: 95%;
+    height: 75%;
+    border-collapse: collapse;
+}
+.productTable{
+    width: 100%;
+    border-collapse: collapse;
+}
+.productTable tr{
+    text-align: center;
+    height: 40px;
+}
+.productTable thead tr{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.productTable caption{
+    margin-bottom: 5px;
+}
+.productTable tbody tr:nth-child(odd){
+    background-color:#eceaea;
+}
+.productTable tbody input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+.tableBtn{
+    background-color: #00A65A;
+    width: 55px;
+    height: 25px;
+}
+.tableBtn:hover{
+    background-color: #077946;
+}
+.center {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 15%;
+}
+.tableBtn{
+    background-color: #00A65A;
+    color: #fff;
+    width: 50px;
+    height: 25px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  .tableBtn:hover{
+    background-color: #077946;
+  }
+
+  /* Modal */
+.modalContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgb(0, 0, 0, 0.9);
+    display: none;
+    transition:display 5s ease-in-out;
+}
+.modalContainer .modal{
+    width: 700px;
+    height: 500px;
+    z-index: 5;
+    background: #fff;
+    transform: translate(50%, 10%);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.page_btn{
+    width: 50px;
+    margin: 5px;
+}
+.productAdd{
+    width: 200px;
+    height: 300px;
+    display: none;
+    z-index: 5;
+}

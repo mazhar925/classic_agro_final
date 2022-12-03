@@ -1,0 +1,69 @@
+<%-include('./common/navbar') %>
+<main class="mainSection">
+    <div class="stockSection">
+        <button class="btn btnGeneral" onclick="addModal('productAddModal')">Add New</button>
+        <button class="btn btnPrimary" onclick="history.back()">Back</button>
+    </div>
+    <div class="productSection">
+        <div class="productTableContainer">
+            <table class="productTable"  style="margin-top: 20px;">
+                <caption><h3>Category List</h3></caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Category Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tBody">
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="center">
+            <div class="pagination">
+            </div>
+          </div>
+    </div>
+</main>
+</div>
+
+<!-- Edit Modal -->
+<div class="modalContainer" id="userEditModal">
+<div class="modal">
+    <div><h2>Update</h2></div>
+    <div>
+        <p>PID: <span id="idPro"></span></p>
+        <label for="category_name">Category Name:</label>
+        <input type="text" name="category_name" id="inputCategory">
+    </div>
+    <div>
+        <button class="btn btnGeneral" onclick="modifyData()">Update</button>
+        <button class="btn btnAlert" onclick="closeModal('userEditModal')">Cancel</button>
+    </div>
+</div>
+</div>
+
+<!-- Category Add Modal -->
+<div class="modalContainer" id="productAddModal">
+<div class="modal">
+    <div><h1>Add Category</h1></div>
+    <div>
+        <label for="category_name">Category Name:</label>
+        <input type="text" name="category_name" id="inputAddCategory">
+    </div>
+    <div>
+        <button class="btn btnGeneral" onclick="categoryAdd()">ADD</button>
+        <button class="btn btnAlert" onclick="closeProductModal('productAddModal')">Cancel</button>
+    </div>
+</div>
+</div>
+
+
+<script src="/js/category/pagination.js"></script>
+<script src="/js/category/modify.js"></script>
+<script src="/js/category/addCategory.js"></script>
+
+<script src="https://kit.fontawesome.com/e027f13b6d.js" crossorigin="anonymous"></script>
+</body>
+</html>

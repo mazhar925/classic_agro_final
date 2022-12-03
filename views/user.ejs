@@ -1,0 +1,175 @@
+<%- include('./common/navbar')%>
+
+<main class="mainSection">
+    <div class="stockSection">
+        <button class="btn btnGeneral" onclick="openModal('userAddModal')">Add User</button>
+        <button class="btn btnPrimary" onclick="openModal('paymentModal')">Payment</button>
+    </div>
+    <div class="productSection">
+        <div class="searchBar">
+            <input type="text" id="dataInput" onkeyup="searchFunction()" placeholder="Search by name" title="Type in a name">
+        
+        </div>
+        <div class="productTableContainer">
+            <table class="productTable">
+                <caption><h3>User List</h3></caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>User Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Sale</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableData">
+                    <tr>
+                        <td>1</td>
+                        <td>Gotidanob Sujon</td>
+                        <td>Sonadanga, Khulna</td>
+                        <td>01333333333</td>
+                        <td>12032</td>
+                        <td>Admin</td>
+                        <td>
+                            <button class="tableBtn" onclick="openModal('userEditModal')">Edit</button>
+                            <button class="tableBtn">Ledger</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Ananta Jalil</td>
+                        <td>Sonadanga, Khulna</td>
+                        <td>01333333333</td>
+                        <td>12032</td>
+                        <td>Salesman</td>
+                        <td>
+                            <button class="tableBtn" onclick="openModal('userEditModal')">Edit</button>
+                            <button class="tableBtn">Ledger</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Sakib Al Hasan</td>
+                        <td>Sonadanga, Khulna</td>
+                        <td>01333333333</td>
+                        <td>12032</td>
+                        <td>Deport</td>
+                        <td>
+                            <button class="tableBtn" onclick="openModal('userEditModal')">Edit</button>
+                            <button class="tableBtn">Ledger</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Tamim Iqbal</td>
+                        <td>Sonadanga, Khulna</td>
+                        <td>01333333333</td>
+                        <td>12032</td>
+                        <td>Viewer</td>
+                        <td>
+                            <button class="tableBtn" onclick="openModal('userEditModal')">Edit</button>
+                            <button class="tableBtn">Ledger</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        <!-- Pagination -->
+        <div class="center">
+            <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">&raquo;</a>
+            </div>
+          </div>
+</main>
+</div>
+<!-- Add User Modal -->
+<div class="modalContainer" id="userAddModal">
+    <div class="modal">
+        <div>
+            <label for="fname">First Name:</label>
+            <input type="text" placeholder="First Name">
+            <label for="lname">Last Name:</label>
+            <input type="text" placeholder="Last Name">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Email">
+            <label for="phone">Phone:</label>
+            <input type="phone" placeholder="Phone">
+        </div>
+        <div>
+            <label for="address">Address:</label>
+            <input type="text" placeholder="Address">
+            <label for="city">City:</label>
+            <input type="text" placeholder="City">
+        </div>
+        <div>
+            <button class="btn btnGeneral">Add User</button>
+            <button class="btn btnAlert" onclick="closeModal('userAddModal')">Cancel</button>
+        </div>
+    </div>
+</div>
+<!-- Payment Modal -->
+<div class="modalContainer" id="paymentModal">
+    <div class="modal">
+        <div>
+            <label for="fname">First Name:</label>
+            <input type="text" placeholder="First Name">
+            <label for="lname">Last Name:</label>
+            <input type="text" placeholder="Last Name">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Email">
+            <label for="phone">Phone:</label>
+            <input type="phone" placeholder="Phone">
+        </div>
+        <div>
+            <label for="address">Address:</label>
+            <input type="text" placeholder="Address">
+            <label for="city">City:</label>
+            <input type="text" placeholder="City">
+        </div>
+        <div>
+            <button class="btn btnGeneral">Add User</button>
+            <button class="btn btnAlert" onclick="closeModal('paymentModal')">Cancel</button>
+        </div>
+    </div>
+</div>
+<!-- Edit Modal -->
+<div class="modalContainer" id="userEditModal">
+    <div class="modal">
+        <div>
+            <label for="fname">First Name:</label>
+            <input type="text" placeholder="First Name">
+            <label for="lname">Last Name:</label>
+            <input type="text" placeholder="Last Name">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Email">
+            <label for="phone">Phone:</label>
+            <input type="phone" placeholder="Phone">
+        </div>
+        <div>
+            <label for="address">Address:</label>
+            <input type="text" placeholder="Address">
+            <label for="city">City:</label>
+            <input type="text" placeholder="City">
+        </div>
+        <div>
+            <button class="btn btnGeneral">Add User</button>
+            <button class="btn btnAlert" onclick="closeModal('userEditModal')">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/e027f13b6d.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<%-include('./common/navbar') %>
+<main class="mainSection">
+    <div class="stockSection">
+        <button class="btn btnGeneral" onclick="productAddModal('productAddModal')">Add Product</button>
+        <button class="btn btnAlert" onclick="location.assign('./stocks')">Add Stock</button>
+        <button class="btn btnPrimary" onclick="location.assign('./category')">Categories</button>
+    </div>
+    <div class="productSection">
+        <div class="searchBar">
+            <input type="text" placeholder="Product Name" id="dataInput">
+            <button class="searchBtn" onclick="searchFunction()">Search</button>
+        </div>
+        <div class="productTableContainer">
+            <table class="productTable">
+                <caption><h3>Product List</h3></caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Category</th>
+                        <th>Product Name</th>
+                        <th>Qty</th>
+                        <th>PC</th>
+                        <th>MRP</th>
+                        <th>TP</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tBody">
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="center">
+            <div class="pagination">
+            </div>
+          </div>
+    </div>
+</main>
+</div>
+
+<!-- Product Edit Modal -->
+<div class="modalContainer" id="userEditModal">
+<div class="modal">
+    <div><h2>Update</h2></div>
+    <div>
+        <p>PID: <span id="idPro"></span></p>
+        <label for="product_name">Product Name:</label>
+        <input type="text" name="product_name" id="inputProduct">
+        <label for="qty">Product Qty:</label>
+        <input type="text" name="qty" id="inputQty"  disabled>
+    </div>
+    <div>
+        <label for="PC">PC:</label>
+        <input type="text" name="pc" id="inputPc">
+        <label for="MRP">MRP:</label>
+        <input type="text" name="mrp" id="inputMrp">
+        <label for="TP">TP:</label>
+        <input type="text" name="tp" id="inputTp">
+    </div>
+    <div>
+        <button class="btn btnGeneral" onclick="modifyData()">Update</button>
+        <button class="btn btnAlert" onclick="closeModal('userEditModal')">Cancel</button>
+    </div>
+</div>
+</div>
+
+<!-- Product Add Modal -->
+<div class="modalContainer" id="productAddModal">
+<div class="modal">
+    <div><h1>Add Product</h1></div>
+    <div>
+        <label for="category">Categories:</label>
+        <select name="category" id="category_name"> 
+        </select>
+    </div>
+    <div>
+        <label for="product_name">Product Name:</label>
+        <input type="text" name="product_name" id="inputAddProduct">
+        <label for="qty">Product Qty:</label>
+        <input type="text" name="qty" id="inputAddQty">
+    </div>
+    <div>
+        <label for="pc">PC:</label>
+        <input type="text" name="pc" id="inputAddPc">
+        <label for="mrp">MRP:</label>
+        <input type="text" name="mrp" id="inputAddMrp">
+        <label for="tp">TP:</label>
+        <input type="text" name="tp" id="inputAddTp">
+    </div>
+    <div>
+        <button class="btn btnGeneral" onclick="productAdd()">ADD</button>
+        <button class="btn btnAlert" onclick="closeProductModal('productAddModal')">Cancel</button>
+    </div>
+</div>
+</div>
+
+<script>
+    const ledger=(id)=>{
+        location.assign('./productLedger')
+        localStorage.setItem('id', id);
+    }
+</script>
+<script src="/js/product/pagination.js"></script>
+<script src="/js/product/search.js"></script>
+<script src="/js/product/modify.js"></script>
+<script src="/js/product/addProduct.js"></script>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/e027f13b6d.js" crossorigin="anonymous"></script>
+</body>
+</html>

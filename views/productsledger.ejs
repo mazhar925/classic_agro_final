@@ -1,0 +1,93 @@
+<%-include('./common/navbar') %>
+<main class="mainSection">
+    <div class="stockSection">
+        <button class="btn btnPrimary" onclick="history.back()">Back</button>
+    </div>
+    <div class="productSection">
+        <div class="searchBar" style="justify-content:space-evenly ;">
+            <label for="from">From</label>
+            <input type="date" name="from">
+            <label for="to">To</label>
+            <input type="date" name="to">
+            <button class="searchBtn" onclick="searchFunction()">Search</button>
+        </div>
+        <div class="productTableContainer">
+            <table class="productTable">
+                <caption><h3>Stocks Ledger</h3></caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Product Name</th>
+                        <th>Qty</th>
+                        <th>By</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tBody">
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="center">
+            <div class="pagination">
+            </div>
+          </div>
+    </div>
+</main>
+</div>
+
+<!-- Edit Modal -->
+<div class="modalContainer" id="userEditModal">
+<div class="modal">
+    <div><h2>Update</h2></div>
+    <div>
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="editDateUp">
+    </div>
+    <div>
+        <label for="Qty">Qty:</label>
+        <input type="text" name="Qty" id="editQty">
+    </div>
+    <div>
+        <button class="btn btnGeneral" onclick="modifyData()">Update</button>
+        <button class="btn btnAlert" onclick="closeModal('userEditModal')">Cancel</button>
+    </div>
+</div>
+</div>
+
+<!-- Stock Add Modal -->
+<div class="modalContainer" id="productAddModal">
+<div class="modal">
+    <div><h1>Add Stock</h1></div>
+    <div>
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="inputDateUp">
+        <div>
+            <label for="user">User:</label>
+            <select name="user" id="user_name"> 
+            </select>
+        </div>
+        <div>
+            <label for="product">Product:</label>
+            <select name="product" id="product_name"> 
+            </select>
+        </div>
+        <label for="Qty">Qty:</label>
+        <input type="text" name="Qty" id="inputQty">
+    </div>
+    <div>
+        <button class="btn btnGeneral" onclick="addStock()">ADD</button>
+        <button class="btn btnAlert" onclick="closeProductModal('productAddModal')">Cancel</button>
+    </div>
+</div>
+</div>
+
+
+<script src="/js/stocks/paginationledger.js"></script>
+<script src="/js/stocks/modify.js"></script>
+<script src="/js/stocks/addCategory.js"></script>
+
+<script src="https://kit.fontawesome.com/e027f13b6d.js" crossorigin="anonymous"></script>
+</body>
+</html>
